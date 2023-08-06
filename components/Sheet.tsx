@@ -16,7 +16,7 @@ export const SheetComponent = () => {
   return (
     <div className=" block md:hidden">
       <Sheet  >
-        <SheetTrigger className="absolute top-[0.8rem] right-[9.5rem]"><Button  variant='outline'><MenuIcon /></Button></SheetTrigger>
+        <SheetTrigger className="absolute top-[0.8rem] right-[9.5rem]"><div className="border-[1px] p-2 rounded-md"><MenuIcon /></div></SheetTrigger>
         <SheetContent>
           <SheetHeader>
             <SheetTitle>Explore the options</SheetTitle>
