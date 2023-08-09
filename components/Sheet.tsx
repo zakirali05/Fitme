@@ -12,11 +12,13 @@ import {
 import { Button } from "./ui/button"
 import { MenuIcon } from "lucide-react"
 import Link from "next/link"
+import { useAuth } from "@clerk/nextjs"
 export const SheetComponent = () => {
+  const user = useAuth()
   return (
     <div className=" block md:hidden">
       <Sheet  >
-        <SheetTrigger className="absolute top-[0.8rem] right-[9.5rem]"><div className="border-[1px] p-2 rounded-md"><MenuIcon /></div></SheetTrigger>
+        <SheetTrigger className={`absolute top-[0.8rem]   ${user.isSignedIn?"right-[6.5rem]" :"right-[9.5rem]"  }`}><div className="border-[1px] p-2 rounded-md"><MenuIcon /></div></SheetTrigger>
         <SheetContent>
           <SheetHeader>
             <SheetTitle>Explore the options</SheetTitle>
